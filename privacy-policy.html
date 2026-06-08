@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — ResuMint</title>
+  <meta name="description" content="ResuMint Privacy Policy — How we handle your data.">
+
+  <style>
+    /* ── Reset ──────────────────────────────── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── Colors (matching ResuMint app theme) ── */
+    :root {
+      --mint-primary: #3DDC97;
+      --mint-dark:    #2BB87D;
+      --mint-light:   #E8F9F1;
+      --bg:           #F9FAFB;
+      --white:        #FFFFFF;
+      --text-primary: #1A1A2E;
+      --text-secondary: #6B7280;
+      --text-hint:    #9CA3AF;
+      --border:       #E5E7EB;
+      --shadow:       0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    /* ── Base ───────────────────────────────── */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    .app-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .app-bar-content {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .app-bar h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .back-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    /* ── Last Updated Badge ─────────────────── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--mint-light);
+      color: var(--mint-dark);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 0 auto 24px;
+    }
+    .badge-wrap { text-align: center; }
+
+    /* ── Intro ──────────────────────────────── */
+    .intro-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .intro-text {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    /* ── TL;DR Card ─────────────────────────── */
+    .tldr {
+      background: linear-gradient(135deg, var(--mint-light), rgba(232,249,241,0.5));
+      border: 1px solid rgba(61,220,151,0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+    .tldr-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .tldr-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--mint-primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tldr-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--mint-dark);
+    }
+    .tldr-list {
+      list-style: none;
+    }
+    .tldr-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+    .tldr-list li::before {
+      content: "✓";
+      color: var(--mint-dark);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Policy Sections ────────────────────── */
+    .section {
+      margin-bottom: 32px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--mint-light);
+      color: var(--mint-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .section-summary {
+      background: var(--bg);
+      border-left: 3px solid var(--mint-primary);
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-primary);
+    }
+    .section-body {
+      padding: 0 4px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      white-space: pre-line;
+    }
+
+    /* ── Contact Card ───────────────────────── */
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 32px 0;
+    }
+    .contact-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--mint-light);
+      color: var(--mint-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .contact-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .contact-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .contact-btn {
+      display: block;
+      width: 100%;
+      background: var(--mint-primary);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 100px;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover {
+      background: var(--mint-dark);
+    }
+    .contact-email {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-hint);
+      margin-top: 12px;
+    }
+
+    /* ── Footer ─────────────────────────────── */
+    .footer {
+      text-align: center;
+      color: var(--text-hint);
+      font-size: 12px;
+      margin-top: 32px;
+    }
+
+    /* ── Responsive ─────────────────────────── */
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px 48px; }
+      .intro-title { font-size: 24px; }
+      .section-body { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── App Bar ──────────────────────── -->
+  <div class="app-bar">
+    <div class="app-bar-content">
+      <h1>Privacy Policy</h1>
+    </div>
+  </div>
+
+  <!-- ── Body ─────────────────────────── -->
+  <div class="container">
+
+    <!-- Last Updated -->
+    <div class="badge-wrap">
+      <div class="badge">
+        📅 Last updated: May 2026
+      </div>
+    </div>
+
+    <!-- Intro -->
+    <h2 class="intro-title">Your privacy matters to us.</h2>
+    <p class="intro-text">
+      This Privacy Policy explains how ResuMint handles your information.
+      We've designed our app with privacy in mind — your resume data stays
+      on your device.
+    </p>
+
+    <!-- TL;DR -->
+    <div class="tldr">
+      <div class="tldr-header">
+        <div class="tldr-icon">⚡</div>
+        <div class="tldr-title">The Short Version</div>
+      </div>
+      <ul class="tldr-list">
+        <li>Your resume data stays on your device — we never see it.</li>
+        <li>We don't have user accounts or cloud sync.</li>
+        <li>Ads &amp; analytics use anonymous data only.</li>
+        <li>You're always in control — uninstall to delete everything.</li>
+      </ul>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🗄️</div>
+        <div class="section-title">1. Information We Collect</div>
+      </div>
+      <div class="section-summary">
+        In short: We don't collect your resume data. Everything stays on your phone.
+      </div>
+      <div class="section-body">ResuMint is designed as an offline-first app. Your resume content — including your name, email, work history, education, skills, and any other information you enter — is stored exclusively on your device using local storage (Hive database).
+
+We do not transmit, upload, or store this information on any remote server. We cannot access, view, or recover your resumes.</div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📱</div>
+        <div class="section-title">2. How Your Data is Stored</div>
+      </div>
+      <div class="section-summary">
+        Your data lives on your device only. Uninstalling the app removes it.
+      </div>
+      <div class="section-body">All resume data is saved locally in your device's app storage using an encrypted local database (Hive). This data:
+
+• Never leaves your device unless you explicitly export or share a PDF
+• Is not backed up to our servers
+• Is permanently deleted if you uninstall the app
+• Cannot be recovered by us if lost
+
+We strongly recommend exporting and backing up your resumes regularly using the Save PDF feature.</div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📦</div>
+        <div class="section-title">3. Third-Party Services</div>
+      </div>
+      <div class="section-summary">
+        We use Google services to keep the app running and free.
+      </div>
+      <div class="section-body">ResuMint integrates the following third-party services:
+
+• Google AdMob — Displays ads to free users. AdMob may collect device identifiers and usage data to serve relevant ads. See Google's privacy policy at policies.google.com.
+
+• Google Play Billing — Processes in-app purchases for Premium subscriptions. Payment information is handled entirely by Google; we never see your card details.
+
+• Firebase Analytics — Helps us understand how users interact with the app (e.g., which features are most used) to improve the experience. Data is anonymized and aggregated.
+
+• Firebase Crashlytics — Collects crash reports to help us fix bugs faster. Reports contain technical information about the crash but no personal resume data.
+
+These services may collect anonymous device information such as device model, OS version, and app usage patterns. They do not access your resume content.</div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🛡️</div>
+        <div class="section-title">4. Permissions We Request</div>
+      </div>
+      <div class="section-summary">
+        We only ask for what we need to save your PDFs.
+      </div>
+      <div class="section-body">ResuMint may request the following device permissions:
+
+• Storage — Required to save your exported resume PDFs to your Downloads folder. On Android 11 and above, this is handled automatically without a permission prompt.
+
+• Internet — Required for ads, in-app purchases, and analytics.
+
+We do not request access to your contacts, camera, location, microphone, or any other sensitive permissions.</div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔒</div>
+        <div class="section-title">5. Your Rights</div>
+      </div>
+      <div class="section-summary">
+        You're always in control of your data.
+      </div>
+      <div class="section-body">Since your data is stored locally on your device, you have full control over it. You can at any time:
+
+• View, edit, or delete any resume directly in the app
+• Export your resumes as PDFs to keep your own backups
+• Uninstall the app to permanently delete all stored data
+• Opt out of personalized ads through your device's ad settings
+
+If you are located in the European Economic Area (EEA), United Kingdom, or California, you have additional rights under GDPR and CCPA regulations including the right to access, correct, or request deletion of any personal data we may hold. Since we do not collect or store personal data on our servers, most of these rights are exercised directly on your device.</div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">👥</div>
+        <div class="section-title">6. Children's Privacy</div>
+      </div>
+      <div class="section-summary">
+        ResuMint is intended for adults building careers.
+      </div>
+      <div class="section-body">ResuMint is designed for users aged 13 and above who are building resumes for educational, professional, or career purposes. We do not knowingly collect information from children under the age of 13.
+
+If you believe a child has used the app, please contact us and we will assist where possible.</div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔐</div>
+        <div class="section-title">7. Data Security</div>
+      </div>
+      <div class="section-summary">
+        Local-first means safer by default.
+      </div>
+      <div class="section-body">Because your resume data never leaves your device, it is inherently more secure than cloud-based alternatives. There is no server we operate that could be breached to expose your information.
+
+For data handled by third-party services (AdMob, Firebase, Google Play Billing), we rely on Google's industry-standard security measures.</div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📄</div>
+        <div class="section-title">8. Changes to This Policy</div>
+      </div>
+      <div class="section-summary">
+        We'll notify you if anything important changes.
+      </div>
+      <div class="section-body">We may update this Privacy Policy from time to time to reflect new features, third-party integrations, or legal requirements. When we make significant changes, we will update the "Last updated" date at the top of this page and may notify you within the app.
+
+Continued use of ResuMint after changes are posted constitutes acceptance of the updated policy.</div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <div class="contact-header">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-title">Questions or Concerns?</div>
+          <div class="contact-subtitle">We're here to help.</div>
+        </div>
+      </div>
+      <a href="mailto:labsluminex@gmail.com?subject=Privacy%20Policy%20Inquiry%20—%20ResuMint" class="contact-btn">
+        Email Us
+      </a>
+      <div class="contact-email">labsluminex@gmail.com</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © ResuMint · All rights reserved
+    </div>
+
+  </div>
+
+</body>
+</html>
