@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use — ResuMint</title>
+  <meta name="description" content="ResuMint Terms of Use — The ground rules for using our app.">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --mint-primary: #3DDC97;
+      --mint-dark:    #2BB87D;
+      --mint-light:   #E8F9F1;
+      --bg:           #F9FAFB;
+      --white:        #FFFFFF;
+      --text-primary: #1A1A2E;
+      --text-secondary: #6B7280;
+      --text-hint:    #9CA3AF;
+      --border:       #E5E7EB;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                   'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    .app-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .app-bar-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .app-bar h1 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--mint-light);
+      color: var(--mint-dark);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      margin: 0 auto 24px;
+    }
+    .badge-wrap { text-align: center; }
+
+    .intro-title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .intro-text {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+
+    .tldr {
+      background: linear-gradient(135deg, var(--mint-light), rgba(232,249,241,0.5));
+      border: 1px solid rgba(61,220,151,0.3);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+    .tldr-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .tldr-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--mint-primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .tldr-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--mint-dark);
+    }
+    .tldr-list { list-style: none; }
+    .tldr-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 6px 0;
+      color: var(--text-primary);
+      font-size: 14px;
+    }
+    .tldr-list li::before {
+      content: "✓";
+      color: var(--mint-dark);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .section { margin-bottom: 32px; }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--mint-light);
+      color: var(--mint-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .section-summary {
+      background: var(--bg);
+      border-left: 3px solid var(--mint-primary);
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-style: italic;
+    }
+    .section-body {
+      padding: 0 4px;
+      color: var(--text-secondary);
+      font-size: 15px;
+      white-space: pre-line;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 32px 0;
+    }
+    .contact-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--mint-light);
+      color: var(--mint-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .contact-title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .contact-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .contact-btn {
+      display: block;
+      width: 100%;
+      background: var(--mint-primary);
+      color: var(--white);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 100px;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover { background: var(--mint-dark); }
+    .contact-email {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-hint);
+      margin-top: 12px;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--text-hint);
+      font-size: 12px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px 48px; }
+      .intro-title { font-size: 24px; }
+      .section-body { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-bar">
+    <div class="app-bar-content">
+      <h1>Terms of Use</h1>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="badge-wrap">
+      <div class="badge">📅 Last updated: May 2026</div>
+    </div>
+
+    <h2 class="intro-title">The ground rules.</h2>
+    <p class="intro-text">
+      These Terms of Use govern your use of ResuMint. By installing or
+      using the app, you agree to be bound by these terms. Please read
+      them carefully.
+    </p>
+
+    <div class="tldr">
+      <div class="tldr-header">
+        <div class="tldr-icon">⚡</div>
+        <div class="tldr-title">The Short Version</div>
+      </div>
+      <ul class="tldr-list">
+        <li>Use ResuMint for personal, lawful purposes only.</li>
+        <li>Subscriptions auto-renew via Google Play — cancel anytime.</li>
+        <li>Your resume content is yours; the app itself is ours.</li>
+        <li>We don't guarantee job outcomes — we're a tool to help.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">✅</div>
+        <div class="section-title">1. Acceptance of Terms</div>
+      </div>
+      <div class="section-summary">By using ResuMint, you agree to these terms in full.</div>
+      <div class="section-body">By downloading, installing, accessing, or using ResuMint ("the App"), you confirm that you have read, understood, and agree to be bound by these Terms of Use ("Terms"), as well as our Privacy Policy.
+
+If you do not agree to these Terms, you must not use the App. We may update these Terms from time to time; continued use of the App after changes are posted constitutes your acceptance of the updated Terms.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔑</div>
+        <div class="section-title">2. License to Use the App</div>
+      </div>
+      <div class="section-summary">You get a personal, non-transferable license to use the app.</div>
+      <div class="section-body">Luminex Labs grants you a limited, non-exclusive, non-transferable, revocable license to install and use ResuMint on a device that you own or control, strictly for your personal, non-commercial use.
+
+You may not:
+
+• Copy, modify, or create derivative works of the App
+• Reverse-engineer, decompile, or attempt to extract source code
+• Sell, rent, lease, sublicense, or otherwise transfer the App to a third party
+• Remove or alter any copyright or proprietary notices
+• Use the App in any way that violates applicable laws</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">👤</div>
+        <div class="section-title">3. User Conduct</div>
+      </div>
+      <div class="section-summary">Use the app responsibly and don't do anything illegal.</div>
+      <div class="section-body">You agree to use ResuMint only for lawful purposes and in a way that does not infringe on the rights of others. In particular, you agree NOT to:
+
+• Use the App to create resumes containing false, misleading, defamatory, or fraudulent information
+• Attempt to gain unauthorized access to the App or its related systems
+• Interfere with or disrupt the App's functionality
+• Use the App to harass, abuse, or harm any other person
+• Use automated systems (bots, scrapers) with the App
+
+You are solely responsible for the accuracy and content of any information you enter into your resumes.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">💳</div>
+        <div class="section-title">4. In-App Purchases &amp; Subscriptions</div>
+      </div>
+      <div class="section-summary">Payments are handled by Google Play. Subscriptions auto-renew.</div>
+      <div class="section-body">ResuMint offers the following Premium plans:
+
+• Lifetime — A one-time payment that grants permanent access to all Premium features. Non-refundable except as required by law.
+
+• Weekly Subscription — Includes a 3-day free trial. After the trial, your Google Play account will be charged weekly until you cancel.
+
+• Single Export — A one-time payment that grants Premium access for exporting a single resume.
+
+All payments are processed by Google Play. By making a purchase, you agree to Google Play's Terms of Service. Prices are displayed in your local currency and may vary by region.
+
+We reserve the right to change prices, modify subscription plans, or discontinue Premium offerings at any time. Existing subscribers will be notified before any price changes affect their plan.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">⏱️</div>
+        <div class="section-title">5. Free Trial &amp; Auto-Renewal</div>
+      </div>
+      <div class="section-summary">The Weekly plan starts with a free trial. Cancel before it ends to avoid charges.</div>
+      <div class="section-body">When you subscribe to the Weekly plan, you receive instant access to all Premium features for a 3-day free trial period. You will not be charged during the trial.
+
+Important details:
+
+• If you do not cancel before the trial ends, your Google Play account will be charged the weekly subscription fee automatically.
+
+• Your subscription will continue to renew weekly until you cancel.
+
+• To cancel, open the Google Play Store → tap your profile → Payments &amp; subscriptions → Subscriptions → find ResuMint → Cancel subscription.
+
+• Cancellation takes effect at the end of the current billing period. You retain Premium access until then.
+
+• No refunds will be issued for partial billing periods, except as required by law or at our sole discretion.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">↩️</div>
+        <div class="section-title">6. Refunds</div>
+      </div>
+      <div class="section-summary">Refunds are handled by Google Play under their refund policy.</div>
+      <div class="section-body">All refund requests are handled directly through Google Play in accordance with their refund policy. You may be eligible for a refund if you request it within 48 hours of purchase.
+
+To request a refund:
+
+1. Open the Google Play Store
+2. Go to your order history
+3. Find your ResuMint purchase
+4. Tap "Request a refund"
+
+For purchases older than 48 hours, contact us at labsluminex@gmail.com. While we cannot guarantee a refund, we will review each request fairly.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">©️</div>
+        <div class="section-title">7. Intellectual Property</div>
+      </div>
+      <div class="section-summary">Your resume content is yours. The app itself belongs to us.</div>
+      <div class="section-body">Your Content — All resume data you create, including text, structure, and personal information, remains your sole property. Luminex Labs claims no ownership over your resume content.
+
+Our Content — ResuMint, including its source code, design, templates, branding, logos, icons, animations, and all related materials, is the exclusive property of Luminex Labs and is protected by international copyright, trademark, and intellectual property laws.
+
+Templates — The resume templates provided in the App are licensed to you for personal use only. You may export and share resumes created using these templates, but you may not redistribute the templates themselves as part of any other product.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">⚠️</div>
+        <div class="section-title">8. Disclaimers</div>
+      </div>
+      <div class="section-summary">The app is provided "as is". We don't guarantee you'll get a job.</div>
+      <div class="section-body">ResuMint is provided on an "AS IS" and "AS AVAILABLE" basis, without warranties of any kind, either express or implied.
+
+We do not guarantee that:
+
+• The App will be uninterrupted, secure, or error-free
+• Using the App will result in a job offer, interview, or any specific career outcome
+• ATS scores or analysis provided by the App reflect how actual recruiter software will rate your resume
+
+You acknowledge that career success depends on many factors beyond your resume, and that ResuMint is a tool to assist you — not a guarantee of employment.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🛑</div>
+        <div class="section-title">9. Limitation of Liability</div>
+      </div>
+      <div class="section-summary">We're not liable for lost data, missed jobs, or indirect damages.</div>
+      <div class="section-body">To the maximum extent permitted by applicable law, Luminex Labs and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+
+• Loss of data, including resume content (always export backups)
+• Missed job opportunities or career setbacks
+• Loss of revenue, profits, or business
+• Damages resulting from third-party services (Google Play, AdMob, Firebase, etc.)
+
+Our total cumulative liability to you for any claim arising from your use of the App shall not exceed the amount you paid us in the twelve months preceding the claim, or USD $50, whichever is greater.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">❌</div>
+        <div class="section-title">10. Termination</div>
+      </div>
+      <div class="section-summary">We can suspend access if you violate these terms.</div>
+      <div class="section-body">We reserve the right to suspend or terminate your access to ResuMint at any time, without notice, if we believe you have violated these Terms or applicable laws.
+
+You may also terminate your use of the App at any time by uninstalling it. Note that uninstalling will permanently delete all local data, including your resumes — always export backups first.
+
+Termination does not entitle you to any refund of previously paid fees, except as required by law.</div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔄</div>
+        <div class="section-title">11. Changes to These Terms</div>
+      </div>
+      <div class="section-summary">We may update these terms. Continued use means you accept the changes.</div>
+      <div class="section-body">We may revise these Terms of Use from time to time to reflect new features, legal requirements, or business changes. When we make significant changes, we will update the "Last updated" date at the top of this page and may notify you within the App.
+
+It is your responsibility to review these Terms periodically. Your continued use of the App after any changes are posted constitutes your acceptance of the updated Terms. If you do not agree to the changes, you must stop using the App.</div>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-header">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <div class="contact-title">Questions about these Terms?</div>
+          <div class="contact-subtitle">We're here to help.</div>
+        </div>
+      </div>
+      <a href="mailto:labsluminex@gmail.com?subject=Terms%20of%20Use%20Inquiry%20—%20ResuMint" class="contact-btn">
+        Email Us
+      </a>
+      <div class="contact-email">labsluminex@gmail.com</div>
+    </div>
+
+    <div class="footer">© Luminex Labs · All rights reserved</div>
+
+  </div>
+
+</body>
+</html>
